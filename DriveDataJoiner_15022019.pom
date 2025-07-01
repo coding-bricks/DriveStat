@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- For help regarding the pom.xml please have a look at: http://maven.apache.org/pom.html -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.gsi.cs.co</groupId>
+        <artifactId>csco-parent-java-bundle</artifactId>
+        <version>12.0.1</version> <!-- look for more recent version -->
+    </parent>
+
+    <groupId>de.gsi.csco.ap</groupId>
+    <artifactId>app-drivestat</artifactId>
+    <version>12.1.0-SNAPSHOT</version>
+
+    <!-- Adjust this to describe your project -->
+    <description>This is the description for project ${project.artifactId}-${project.version}.
+                Please place something meaningful here since the text will be used to describe your project.</description>
+
+    <!-- Adjust this to point to your documentation webpage -->
+    <url>http://www-acc.gsi.de/</url>
+
+    <properties>
+        <!-- Adjust this to point to your main class -->
+        <bundle.mainClass>de.gsi.csco.ap.app_drivestat.TemplateApp</bundle.mainClass>
+
+        <!-- Adjust this to point to your SVN repository where you want to share the project -->
+        <scm.repo>applications</scm.repo>
+        <scm.path>${project.artifactId}</scm.path>
+    </properties>
+
+    <scm>
+        <connection>scm:svn:${svn.dev.url}/${scm.repo}/${scm.path}/trunk</connection>
+        <developerConnection>scm:svn:${svn.dev.url}/${scm.repo}/${scm.path}/trunk</developerConnection>
+        <url>${svn.view.url}/${scm.repo}/${scm.path}/trunk</url>
+    </scm>
+
+    <!-- Adjust this to point to your continuous integration location for the project -->
+    <ciManagement>
+        <system>hudson</system>
+        <url>https://builder.acc.gsi.de/jenkins/job/${project.artifactId}/</url>
+    </ciManagement>
+
+    <!-- Change the URL to the one pointing to your projects bugtracker -->
+    <issueManagement>
+        <system>Bugzilla</system>
+        <url>https://www.acc.gsi.de/bugzilla/describecomponents.cgi?product=Applications</url>
+    </issueManagement>
+
+    <!-- Add your name to this section (and other developers) and adjust the
+        roles accordingly, there must be at least one person marked as 'owner' -->
+    <developers>
+        <developer>
+            <id>clusterAccountName</id>
+            <name>Max Mustermann</name>
+            <email>Max.Mustermann@gsi.de</email>
+            <url>${group.url.gsi}</url>
+            <timezone>+1</timezone>
+            <roles>
+                <role>owner</role>
+                <role>architect</role>
+                <role>developer</role>
+                <role>release engineer</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>musterfrau</id>
+            <name>Maria Musterfrau</name>
+            <email>Maria.Musterfrau@gsi.de</email>
+            <url>${group.url.csco}</url>
+            <timezone>+1</timezone>
+            <roles>
+                <role>developer</role>
+                <role>tester</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gsi.cs.co.ap.common.gui.elements</groupId>
+            <artifactId>cscoap-common-gui-elements</artifactId>
+            <version>12.0.2</version> <!-- look for more recent version -->
+        </dependency>
+        <dependency>
+            <groupId>de.gsi</groupId>
+            <artifactId>sequencer</artifactId>
+            <version>12.0.1</version>
+        </dependency>
+    </dependencies>
+
+</project>
