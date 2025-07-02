@@ -1,0 +1,9 @@
+Read-Only License
+
+This source code is provided exclusively for consultation and educational purposes.
+
+All rights are reserved. Copying, modifying, distributing, executing, or otherwise using this code, in whole or in part, is strictly prohibited without prior written permission from the author.
+
+Use of this code in any software project, whether public or private, commercial or non-commercial, is expressly forbidden.
+
+© Dr. Fabio Schirru, 2020
